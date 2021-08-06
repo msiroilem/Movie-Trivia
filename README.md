@@ -1,11 +1,11 @@
 # Project Title
 
-## Date 7/27/2021
+## Date 8/13/2021
 
 ### By: Tyler Jones
 
 [Github](https://github.com/msiroilem) |
-[LinkedIn](https://www.linkedin.com/in/tyler-jones-36a30136/)
+[LinkedIn](https://www.linkedin.com/in/tyler-jones-36a30136/) | [Trello]
 
 ---
 
