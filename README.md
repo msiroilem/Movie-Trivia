@@ -5,7 +5,7 @@
 ### By: Tyler Jones
 
 [Github](https://github.com/msiroilem) |
-[LinkedIn](https://www.linkedin.com/in/tyler-jones-36a30136/) | [Trello]
+[LinkedIn](https://www.linkedin.com/in/tyler-jones-36a30136/) | [Trello](https://trello.com/b/tql959Uf/movie-trivia-mania)
 
 ---
 
