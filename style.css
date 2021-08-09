@@ -5,11 +5,19 @@ h1 {
   text-align: center;
 }
 #question-field {
-  border: solid black 2px;
+  text-align: left;
 }
 .answer-fields {
-  display: inline-flex;
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
 }
 #answer-1 {
-  height: auto;
+  color: yellow;
+}
+.high-score {
+  color: black;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
