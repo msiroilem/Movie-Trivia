@@ -1,4 +1,4 @@
-# Movie Trivia
+# Movie Trivia Mania
 
 ## Date 8/13/2021
 
