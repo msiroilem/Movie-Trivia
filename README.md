@@ -1,4 +1,4 @@
-# Project Title
+# Connect Four
 
 ## Date 8/13/2021
 
@@ -11,7 +11,7 @@
 
 **Description**
 
-This is the description section.
+A game of Connect Four. The goal is to have four coins of your color in a row, column or diagonal consecutively.
 
 **Technologies Used**
 
@@ -25,27 +25,15 @@ This is the description section.
 
 **Getting Started**
 
-This is the section that explains how to open up the webpage.
 
-##### tennis
-
-![Tennis](https://images.unsplash.com/photo-1602211844066-d3bb556e983b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHRlbm5pc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80)
-
-##### movies
-
-![Movies](https://media.gettyimages.com/vectors/cinema-poster-with-cola-filmstrip-and-clapper-vector-vector-id1244034031?s=612x612)
-
-##### coding
-
-![Coding](https://image.shutterstock.com/image-vector/abstract-futuristic-cyberspace-binary-code-260nw-740523562.jpg)
 
 **_Future Updates_**
 
 - [ ] Future update 1
 - [ ] Future update 2
-- [x] Completed update
-- [x] ~~Strikethrough~~
+- [] Completed update
+- [] ~~Strikethrough~~
 
 ### Credits
 
-**Images**: Google Search
+
