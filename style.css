@@ -1,0 +1,15 @@
+body {
+  background-color: gray;
+}
+h1 {
+  text-align: center;
+}
+#question-field {
+  border: solid black 2px;
+}
+.answer-fields {
+  display: inline-flex;
+}
+#answer-1 {
+  height: auto;
+}
