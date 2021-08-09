@@ -1,4 +1,4 @@
-# Connect Four
+# Movie Trivia
 
 ## Date 8/13/2021
 
@@ -11,7 +11,7 @@
 
 **Description**
 
-A game of Connect Four. The goal is to have four coins of your color in a row, column or diagonal consecutively.
+A trivia game of movie questions with four choices per question.
 
 **Technologies Used**
 
