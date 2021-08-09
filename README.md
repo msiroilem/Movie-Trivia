@@ -18,6 +18,7 @@ A trivia game of movie questions with four choices per question.
 - HTML
 - CSS
 - JavaScript
+- TMDB API (maybe?)
 
 1. Item 1
 2. Item 2
