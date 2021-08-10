@@ -1,14 +1,16 @@
 // Global Variables
 let userChoice = ' '
 let answersCorrect = 0
-let userPosition = 0
+let highScore = 0
+let currentQuestion = 0
 
-const playGameButton = document.querySelector('.playGameBtn')
-const answerFields = document.querySelectorAll('.answer-fields')
+const playGameButton = document.querySelector('.play-game-button')
+const answerFields = document.querySelector('.answer-fields')
 const questionField = document.querySelector('#question-field')
-const highScore = document.querySelector('.high-score')
+const highScoreDisplay = document.querySelector('.high-score')
 const restartButton = document.querySelectorAll('#restart')
-
+const nextButton = document.querySelector('#next')
+console.log(answerFields)
 const questions = [
   'What was the release year for the Ridley Scott directed movie, Alien?',
   'What was the number of samurai in the 1954 movie directed by Akira Kurosawa?',
@@ -52,18 +54,30 @@ const correctAnswers =
 // Event Listeners
 
 // Create way for questions to appear on game.html page
+const displayAnswers = function () {
+  answers[currentQuestion].forEach((answer) => {
+    let btn = document.createElement(`button`)
+    btn.innerText = answer
+    answerFields.appendChild(btn)
+  })
+}
 
-questionField.innerHTML = `${questions[0]}`
+const renderQuestions = function () {
+  questionField.innerHTML = questions[currentQuestion]
+  displayAnswers()
+}
+
+renderQuestions()
+// create if statement for when questions are over, questions.length clear board
+nextButton.addEventListener('click', () => {
+  currentQuestion += 1
+  answerFields.innerHTML = ''
+  renderQuestions()
+})
 
 // Create way to click answer and have it register as correct or incorrect
 
-answerFields.innerHTML = `${answers[0]}`
-
 // Create way to add and subtract from score based on correct and incorrect answers
-// for (let i = 0; i < answerFields.length; i++) {
-//   if (userChoice === answers) {
-//   }
-// }
 
 function restart() {
   location: reload()

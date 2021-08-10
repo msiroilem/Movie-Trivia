@@ -1,3 +1,7 @@
+.play-game-button {
+  text-align: center;
+  font-size: 30px;
+}
 body {
   background-color: gray;
   padding: 0;
@@ -23,8 +27,4 @@ h1 {
   position: absolute;
   top: 0;
   right: 0;
-}
-.play-game-button {
-  text-align: center;
-  font-size: 30px;
 }
