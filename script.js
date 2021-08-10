@@ -1,11 +1,13 @@
 // Global Variables
 let userChoice = ' '
 let answersCorrect = 0
+
 const playGameButton = document.querySelector('.playGameBtn')
 const answerFields = document.querySelectorAll('.answer-fields')
 const questionField = document.querySelectorAll('#question-field')
 const highScore = document.querySelector('.high-score')
 const restartButton = document.querySelectorAll('#restart')
+
 const questions = [
   'What was the release year for Alien?',
   'What was the number of samurai in the 1954 movie directed by Akira Kurosawa?',
@@ -18,7 +20,7 @@ const questions = [
   'Which of these movies was released most recently in theaters?',
   'Which movie won Best Picture at the 92nd Academy Awards?'
 ]
-console.log(questions[0])
+
 const answers = [
   ['1978', '1979', '1980', '1981'],
   ['Five', 'Nine', 'Three ', 'Seven'],
@@ -48,14 +50,26 @@ const correctAnswers =
 
 // Event Listeners
 
-// TODO for (let i = 0; i < answerFields.length; i++) {
-//   answerFields.addEventListener('click',
-//     if (userChoice === true) {
-
-//     })
-//   }
+// Create way to click answer and have it register as correct or incorrect
+// Create way to add and subtract from score based on correct and incorrect answers
+for (let i = 0; i < answerFields.length; i++) {
+  if (userChoice === answers) {
+  }
+}
 
 function restart() {
   location: reload()
   restartButton.addEventListener('click', restart)
 }
+// Create way to put userScore on high score field
+
+// Create way to interact with user with correct and incorrect answers
+
+//Create timer of 10 seconds so that user is forced to answers promptly
+let timer = setInterval(countdownTimer, 10000)
+
+function countdownTimer() {}
+
+//Subtract from user score and register answer to current question as incorrect if timer runs out.
+
+//If timer doesn't run out while answering question correctly, move on to next question and award user points
