@@ -9,6 +9,7 @@ h1 {
 }
 .answer-fields {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-content: space-around;
 }
@@ -20,4 +21,8 @@ h1 {
   position: absolute;
   top: 0;
   right: 0;
+}
+.play-game-button {
+  text-align: center;
+  font-size: 30px;
 }
