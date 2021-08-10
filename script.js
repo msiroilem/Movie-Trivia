@@ -8,9 +8,9 @@ const playGameButton = document.querySelector('.play-game-button')
 const answerFields = document.querySelector('.answer-fields')
 const questionField = document.querySelector('#question-field')
 const highScoreDisplay = document.querySelector('.high-score')
-const restartButton = document.querySelectorAll('#restart')
+const restartButton = document.querySelector('#restart')
 const nextButton = document.querySelector('#next')
-console.log(answerFields)
+
 const questions = [
   'What was the release year for the Ridley Scott directed movie, Alien?',
   'What was the number of samurai in the 1954 movie directed by Akira Kurosawa?',
@@ -53,7 +53,7 @@ const correctAnswers =
 
 // Event Listeners
 
-// Create way for questions to appear on game.html page
+// Create way for questions to appear on game.html page TODO
 const displayAnswers = function () {
   answers[currentQuestion].forEach((answer) => {
     let btn = document.createElement(`button`)
@@ -72,18 +72,32 @@ renderQuestions()
 nextButton.addEventListener('click', () => {
   currentQuestion += 1
   answerFields.innerHTML = ''
+
   renderQuestions()
 })
 
-// Create way to click answer and have it register as correct or incorrect
-
+// TODOCreate way to click answer and have it register as correct or incorrect
+const clickedAnswer = function () {
+  answers[currentQuestion].forEach((answer) => {
+    answerFields.addEventListener('click')
+  })
+}
 // Create way to add and subtract from score based on correct and incorrect answers
 
 function restart() {
-  location: reload()
-  restartButton.addEventListener('click', restart)
+  location.reload()
 }
-// Create way to put userScore on high score field
+restartButton.addEventListener('click', restart)
+
+// TODOCreate way to put userScore on high score field
+if (userChoice === correctAnswers) {
+  highScore++
+  let p = document.createElement('p')
+  highScore.appendChild(p)
+} else if (userChoice !== correctAnswers) {
+  highScore--
+  highScore.appendChild(p)
+}
 
 // Create way to interact with user with correct and incorrect answers
 
