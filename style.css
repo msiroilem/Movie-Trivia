@@ -9,8 +9,8 @@ h1 {
 }
 .answer-fields {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  flex-flow: column wrap;
+  justify-content: flex-start;
   align-content: space-around;
 }
 #answer-1 {

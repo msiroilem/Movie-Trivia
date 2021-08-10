@@ -1,5 +1,6 @@
 // Global Variables
-
+let userChoice = ' '
+let answersCorrect = 0
 const playGameButton = document.querySelector('.playGameBtn')
 const answerFields = document.querySelectorAll('.answer-fields')
 const questionField = document.querySelectorAll('#question-field')
@@ -47,9 +48,12 @@ const correctAnswers =
 
 // Event Listeners
 
-for (let i = 0; i < answerFields.length; i++) {
-  answerFields.addEventListener('click')
-}
+// TODO for (let i = 0; i < answerFields.length; i++) {
+//   answerFields.addEventListener('click',
+//     if (userChoice === true) {
+
+//     })
+//   }
 
 function restart() {
   location: reload()
