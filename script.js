@@ -135,5 +135,5 @@ restartButton.addEventListener('click', restart)
   Not having high score have multiple numbers on at it one time. 
   Possibly implementing timer?
   Fixing undefined text that comes up once final question is asked (questions.length prob) 
-  
+  Possibly style answer buttons green if answer correct and red if answer incorrect
    */
