@@ -1,4 +1,3 @@
-// Global Variables
 let userChoice = ' '
 let answersCorrect = 0
 let highScore = 0
@@ -40,16 +39,11 @@ const answers = [
 
 const correctAnswers = [1, 3, 2, 0, 3, 2, 1, 0, 2, 3]
 
-// Event Listeners
-
-// Create way for questions to appear on game.html page TODO
 const displayAnswers = function () {
   answers[currentQuestion].forEach((answer) => {
     let btn = document.createElement(`button`)
     btn.innerText = answer
     btn.addEventListener('click', () => {
-      //TODO  Haven't figured out how to get correct or incorrect response on the page instead of alerts
-
       if (
         answers[currentQuestion].indexOf(answer) ==
         correctAnswers[currentQuestion]
@@ -91,8 +85,6 @@ function updateHighScore() {
   highScoreDisplay.appendChild(p)
 }
 
-// Create way to interact with user with correct and incorrect answers
-
 //Create timer of 10 seconds so that user is forced to answers promptly
 let timer = setInterval(countdownTimer, 10000)
 
@@ -105,8 +97,6 @@ function stopTimer() {
 //Subtract from user score and register answer to current question as incorrect if timer runs out.
 
 //If timer doesn't run out while answering question correctly, move on to next question and award user points
-
-// restart game
 
 function restart() {
   location.reload()
