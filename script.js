@@ -2,13 +2,13 @@ let userChoice = ' '
 let answersCorrect = 0
 let highScore = 0
 let currentQuestion = 0
+let placeholder
 
 const playGameButton = document.querySelector('.play-game-button')
 const answerFields = document.querySelector('.answer-fields')
 const questionField = document.querySelector('#question-field')
 const highScoreDisplay = document.querySelector('.high-score')
 const restartButton = document.querySelector('#restart')
-const nextButton = document.querySelector('#next')
 const paragraph = document.querySelector('p')
 
 const questions = [
@@ -39,25 +39,60 @@ const answers = [
 
 const correctAnswers = [1, 3, 2, 0, 3, 2, 1, 0, 2, 3]
 
+const disableButtons = function () {
+  const answerButtons = document.querySelectorAll('.answer-button')
+
+  answerButtons.forEach((button) => {
+    button.setAttribute('disabled', true)
+  })
+}
+
+const checkAnswers = (btn, answer) => {
+  if (
+    answers[currentQuestion].indexOf(answer) == correctAnswers[currentQuestion]
+  ) {
+    highScore++
+    paragraph.innerText = `Correct!`
+    btn.style.backgroundColor = 'green'
+    disableButtons()
+    setTimeout(() => {
+      nextPage()
+    }, 1500)
+  } else {
+    highScore--
+    paragraph.innerText = `Oh no! You're incorrect!`
+    btn.style.backgroundColor = 'red'
+    disableButtons()
+    setTimeout(() => {
+      nextPage()
+    }, 1500)
+  }
+  updateHighScore()
+}
+
 const displayAnswers = function () {
   answers[currentQuestion].forEach((answer) => {
     let btn = document.createElement(`button`)
+    btn.className = 'answer-button'
     btn.innerText = answer
     btn.addEventListener('click', () => {
-      if (
-        answers[currentQuestion].indexOf(answer) ==
-        correctAnswers[currentQuestion]
-      ) {
-        highScore++
-        paragraph.innerText = `Correct!`
-      } else {
-        highScore--
-        paragraph.innerText = `Oh no! You're incorrect!`
-      }
-      updateHighScore()
+      checkAnswers(btn, answer)
     })
     answerFields.appendChild(btn)
   })
+}
+
+function nextPage() {
+  // placeholder.addEventListener('onclick', () => {
+  //   // when user clicks answer, caption appears saying correct or incorrect and then move to next question without user clicking NEXT BUTTON
+  // })
+  currentQuestion += 1
+  answerFields.innerHTML = ''
+  if (currentQuestion > questions.length - 1) {
+    questionField.innerText = 'Would'
+    answerFields.innerHTML = ''
+  }
+  renderQuestions()
 }
 
 const renderQuestions = function () {
@@ -67,15 +102,6 @@ const renderQuestions = function () {
 
 renderQuestions()
 // create if statement for when questions are over, questions.length clear board
-nextButton.addEventListener('click', () => {
-  currentQuestion += 1
-  answerFields.innerHTML = ''
-  if (questions > questions.length) {
-    questionField.innerText = ''
-    answerFields.innerHTML = ''
-  }
-  renderQuestions()
-})
 
 // TODOCreate way to put userScore on high score field
 function updateHighScore() {
@@ -105,9 +131,9 @@ restartButton.addEventListener('click', restart)
 
 /* 
   
-  Stuff to  work on: progressing to next question without hitting next button.
+  
   Not having high score have multiple numbers on at it one time. 
   Possibly implementing timer?
   Fixing undefined text that comes up once final question is asked (questions.length prob) 
-  Possibly style answer buttons green if answer correct and red if answer incorrect
+  
    */
