@@ -37,9 +37,11 @@ const answers = [
   ['Once Upon a Time in Hollywood', 'Nomadland', 'Mank', 'Parasite']
 ]
 
+console.log(answers[0])
+
 const correctAnswers =
   answers[
-    ([0][1],
+    ([1],
     answers[1][3],
     answers[2][2],
     answers[3][0],
@@ -53,12 +55,16 @@ const correctAnswers =
 
 // Event Listeners
 
-// Create way for questions to appear on game.html page TODO
+// Create way for questions to appear on game.html page
 const displayAnswers = function () {
   answers[currentQuestion].forEach((answer) => {
     let btn = document.createElement(`button`)
     btn.innerText = answer
     answerFields.appendChild(btn)
+    // need click to show correct and incorrect answers
+    // if right answer clicked, add points to current score
+    // if wrong answer clicked, subtract points from current score
+    // need function for correct answers array to check against user submitted answer?
   })
 }
 
@@ -72,31 +78,24 @@ renderQuestions()
 nextButton.addEventListener('click', () => {
   currentQuestion += 1
   answerFields.innerHTML = ''
-
+  if (questions > questions.length) {
+    questionField.innerHTML = ''
+    answerFields.innerHTML = ''
+  }
   renderQuestions()
 })
 
 // TODOCreate way to click answer and have it register as correct or incorrect
 const clickedAnswer = function () {
-  answers[currentQuestion].forEach((answer) => {
-    answerFields.addEventListener('click')
-  })
+  answers[currentQuestion].addEventListener
 }
 // Create way to add and subtract from score based on correct and incorrect answers
-
-function restart() {
-  location.reload()
-}
-restartButton.addEventListener('click', restart)
 
 // TODOCreate way to put userScore on high score field
 if (userChoice === correctAnswers) {
   highScore++
-  let p = document.createElement('p')
-  highScore.appendChild(p)
 } else if (userChoice !== correctAnswers) {
   highScore--
-  highScore.appendChild(p)
 }
 
 // Create way to interact with user with correct and incorrect answers
@@ -113,3 +112,10 @@ function stopTimer() {
 //Subtract from user score and register answer to current question as incorrect if timer runs out.
 
 //If timer doesn't run out while answering question correctly, move on to next question and award user points
+
+// restart game
+
+function restart() {
+  location.reload()
+}
+restartButton.addEventListener('click', restart)
