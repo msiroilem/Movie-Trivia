@@ -10,6 +10,7 @@ const questionField = document.querySelector('#question-field')
 const highScoreDisplay = document.querySelector('.high-score')
 const restartButton = document.querySelector('#restart')
 const nextButton = document.querySelector('#next')
+const paragraph = document.querySelector('p')
 
 const questions = [
   'What was the release year for the Ridley Scott directed movie, Alien?',
@@ -37,8 +38,6 @@ const answers = [
   ['Once Upon a Time in Hollywood', 'Nomadland', 'Mank', 'Parasite']
 ]
 
-console.log(answers[0])
-
 const correctAnswers = [1, 3, 2, 0, 3, 2, 1, 0, 2, 3]
 
 // Event Listeners
@@ -50,27 +49,16 @@ const displayAnswers = function () {
     btn.innerText = answer
     btn.addEventListener('click', () => {
       //TODO  Haven't figured out how to get correct or incorrect response on the page instead of alerts
-      let h3 = document.createElement('h3')
-      h3.innerText = answer
-      h3.appendChild
-
-      alert(`You answered ${answer}`)
-      alert(
-        `The correct answer is...  ${
-          answers[currentQuestion][correctAnswers[currentQuestion]]
-        }
-      `
-      )
 
       if (
         answers[currentQuestion].indexOf(answer) ==
         correctAnswers[currentQuestion]
       ) {
         highScore++
-        console.log(`Correct! Score: ${highScore}`)
+        paragraph.innerText = `Correct!`
       } else {
         highScore--
-        console.log(`Oh no! You're incorrect!`)
+        paragraph.innerText = `Oh no! You're incorrect!`
       }
       updateHighScore()
     })
@@ -89,7 +77,7 @@ nextButton.addEventListener('click', () => {
   currentQuestion += 1
   answerFields.innerHTML = ''
   if (questions > questions.length) {
-    questionField.innerHTML = ''
+    questionField.innerText = ''
     answerFields.innerHTML = ''
   }
   renderQuestions()
@@ -126,7 +114,7 @@ function restart() {
 restartButton.addEventListener('click', restart)
 
 /* 
-  Captions that come up on screen saying Correct or Incorrect once answer is clicked. Use this instead of alerts and console.logs.
+  
   Stuff to  work on: progressing to next question without hitting next button.
   Not having high score have multiple numbers on at it one time. 
   Possibly implementing timer?

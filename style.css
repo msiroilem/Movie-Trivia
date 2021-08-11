@@ -14,10 +14,8 @@ h1 {
   text-align: left;
 }
 .answer-fields {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: flex-start;
-  align-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
 }
 #answer-1 {
   color: yellow;
@@ -26,5 +24,10 @@ h1 {
   color: black;
   position: absolute;
   top: 0;
+  right: 0;
+}
+p {
+  text-align: center;
+  bottom: 0;
   right: 0;
 }
