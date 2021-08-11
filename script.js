@@ -39,32 +39,42 @@ const answers = [
 
 console.log(answers[0])
 
-const correctAnswers =
-  answers[
-    ([1],
-    answers[1][3],
-    answers[2][2],
-    answers[3][0],
-    answers[4][3],
-    answers[5][2],
-    answers[6][1],
-    answers[7][0],
-    answers[8][2],
-    answers[9][3])
-  ]
+const correctAnswers = [1, 3, 2, 0, 3, 2, 1, 0, 2, 3]
 
 // Event Listeners
 
-// Create way for questions to appear on game.html page
+// Create way for questions to appear on game.html page TODO
 const displayAnswers = function () {
   answers[currentQuestion].forEach((answer) => {
     let btn = document.createElement(`button`)
     btn.innerText = answer
+    btn.addEventListener('click', () => {
+      //TODO  Haven't figured out how to get correct or incorrect response on the page instead of alerts
+      let h3 = document.createElement('h3')
+      h3.innerText = answer
+      h3.appendChild
+
+      alert(`You answered ${answer}`)
+      alert(
+        `The correct answer is...  ${
+          answers[currentQuestion][correctAnswers[currentQuestion]]
+        }
+      `
+      )
+
+      if (
+        answers[currentQuestion].indexOf(answer) ==
+        correctAnswers[currentQuestion]
+      ) {
+        highScore++
+        console.log(`Correct! Score: ${highScore}`)
+      } else {
+        highScore--
+        console.log(`Oh no! You're incorrect!`)
+      }
+      updateHighScore()
+    })
     answerFields.appendChild(btn)
-    // need click to show correct and incorrect answers
-    // if right answer clicked, add points to current score
-    // if wrong answer clicked, subtract points from current score
-    // need function for correct answers array to check against user submitted answer?
   })
 }
 
@@ -85,17 +95,12 @@ nextButton.addEventListener('click', () => {
   renderQuestions()
 })
 
-// TODOCreate way to click answer and have it register as correct or incorrect
-const clickedAnswer = function () {
-  answers[currentQuestion].addEventListener
-}
-// Create way to add and subtract from score based on correct and incorrect answers
-
 // TODOCreate way to put userScore on high score field
-if (userChoice === correctAnswers) {
-  highScore++
-} else if (userChoice !== correctAnswers) {
-  highScore--
+function updateHighScore() {
+  let p = document.createElement('p')
+  let node = document.createTextNode(highScore)
+  p.appendChild(node)
+  highScoreDisplay.appendChild(p)
 }
 
 // Create way to interact with user with correct and incorrect answers
@@ -119,3 +124,12 @@ function restart() {
   location.reload()
 }
 restartButton.addEventListener('click', restart)
+
+/* 
+  Captions that come up on screen saying Correct or Incorrect once answer is clicked. Use this instead of alerts and console.logs.
+  Stuff to  work on: progressing to next question without hitting next button.
+  Not having high score have multiple numbers on at it one time. 
+  Possibly implementing timer?
+  Fixing undefined text that comes up once final question is asked (questions.length prob) 
+  Possibly style answer buttons green if answer correct and red if answer incorrect
+   */
