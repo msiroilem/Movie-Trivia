@@ -11,17 +11,14 @@
 
 **Description**
 
-A trivia game of movie questions with four choices per question.
+A trivia game of movie questions with four choices per question. It is the first project submitted for General Assembly's Software Engineering Immersive.
 
 **Technologies Used**
 
 - HTML
 - CSS
 - JavaScript
-
-1. Item 1
-2. Item 2
-   - Sub-Item
+- Surge
 
 **Getting Started**
 
@@ -30,9 +27,7 @@ Upon starting the game, the user will be at a main menu and can click Play Game!
 **_Future Updates_**
 
 - [ ] Utilize TMDB API to increase questions available to user
-- [ ] Increase functionality to allow for simultaneous play between two users
-
+- [ ] Add additional HTML pages with more categories.
+- [ ] Increase functionality to allow for simultaneous play between two users.
 
 ### Credits
-
-
