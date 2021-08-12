@@ -107,5 +107,5 @@ function nextPage() {
 renderQuestions()
 
 function updateScore() {
-  paragraph.innerText = `Score: ${score}`
+  paragraph.innerText = `Score: ${score}/${questions.length}`
 }
