@@ -49,7 +49,7 @@ const disableButtons = function () {
 
 const checkAnswers = (btn, answer) => {
   if (
-    answers[currentQuestion].indexOf(answer) == correctAnswers[currentQuestion]
+    answers[currentQuestion].indexOf(answer) === correctAnswers[currentQuestion]
   ) {
     highScore++
     paragraph.innerText = `Correct!`
@@ -57,7 +57,7 @@ const checkAnswers = (btn, answer) => {
     disableButtons()
     setTimeout(() => {
       nextPage()
-    }, 1500)
+    }, 500)
   } else {
     highScore--
     paragraph.innerText = `Oh no! You're incorrect!`
@@ -65,12 +65,13 @@ const checkAnswers = (btn, answer) => {
     disableButtons()
     setTimeout(() => {
       nextPage()
-    }, 1500)
+    }, 500)
   }
   updateHighScore()
 }
 
 const displayAnswers = function () {
+  console.log(answers[currentQuestion])
   answers[currentQuestion].forEach((answer) => {
     let btn = document.createElement(`button`)
     btn.className = 'answer-button'
@@ -83,15 +84,16 @@ const displayAnswers = function () {
 }
 
 function nextPage() {
-  // placeholder.addEventListener('onclick', () => {
-  //   // when user clicks answer, caption appears saying correct or incorrect and then move to next question without user clicking NEXT BUTTON
-  // })
-  currentQuestion += 1
-  answerFields.innerHTML = ''
-  if (currentQuestion > questions.length - 1) {
-    questionField.innerText = 'Would'
-    answerFields.innerHTML = ''
+  if (currentQuestion < questions.length - 1) {
+    currentQuestion += 1
+  } else {
+    location.reload()
   }
+  answerFields.innerHTML = '  '
+  // if (currentQuestion > questions.length - 1) {
+  //   questionField.innerText = 'Would'
+  //   answerFields.innerHTML = ''
+  // }
   renderQuestions()
 }
 
@@ -101,9 +103,7 @@ const renderQuestions = function () {
 }
 
 renderQuestions()
-// create if statement for when questions are over, questions.length clear board
 
-// TODOCreate way to put userScore on high score field
 function updateHighScore() {
   let p = document.createElement('p')
   let node = document.createTextNode(highScore)
@@ -111,7 +111,6 @@ function updateHighScore() {
   highScoreDisplay.appendChild(p)
 }
 
-//Create timer of 10 seconds so that user is forced to answers promptly
 let timer = setInterval(countdownTimer, 10000)
 
 function countdownTimer() {}
@@ -119,10 +118,6 @@ function countdownTimer() {}
 function stopTimer() {
   clearInterval(timer)
 }
-
-//Subtract from user score and register answer to current question as incorrect if timer runs out.
-
-//If timer doesn't run out while answering question correctly, move on to next question and award user points
 
 function restart() {
   location.reload()
@@ -134,6 +129,4 @@ restartButton.addEventListener('click', restart)
   
   Not having high score have multiple numbers on at it one time. 
   Possibly implementing timer?
-  Fixing undefined text that comes up once final question is asked (questions.length prob) 
-  Possibly style answer buttons green if answer correct and red if answer incorrect
    */
