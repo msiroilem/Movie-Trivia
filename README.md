@@ -18,7 +18,6 @@ A trivia game of movie questions with four choices per question.
 - HTML
 - CSS
 - JavaScript
-- TMDB API (maybe?)
 
 1. Item 1
 2. Item 2
@@ -26,14 +25,13 @@ A trivia game of movie questions with four choices per question.
 
 **Getting Started**
 
-
+Upon starting the game, the user will be at a main menu and can click Play Game! to enter into the trivia game. The user will see a question and four answer choices, with one correct answer. After answering the final, tenth question, the user will be given the option to restart with a Play Again? button.
 
 **_Future Updates_**
 
-- [ ] Future update 1
-- [ ] Future update 2
-- [] Completed update
-- [] ~~Strikethrough~~
+- [ ] Utilize TMDB API to increase questions available to user
+- [ ] Increase functionality to allow for simultaneous play between two users
+
 
 ### Credits
 
