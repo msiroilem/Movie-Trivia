@@ -83,12 +83,13 @@ const displayAnswers = function () {
 function restart() {
   location.reload()
 }
+playAgainBtn.addEventListener('click', restart)
 
 function nextPage() {
   if (currentQuestion < questions.length - 1) {
     currentQuestion += 1
   } else {
-    const userResponse = confirm(`Play again?`)
+    document.getElementById('restart').classList.remove('hidden')
     if (userResponse === true) {
       restart()
     }
