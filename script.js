@@ -5,9 +5,9 @@ let currentQuestion = 0
 const playGameButton = document.querySelector('.play-game-button')
 const answerFields = document.querySelector('.answer-fields')
 const questionField = document.querySelector('#question-field')
+
 const playAgainBtn = document.querySelector('#restart')
 const paragraph = document.querySelector('p')
-const h3 = document.querySelector('h3')
 
 const questions = [
   'What was the release year for the Ridley Scott directed movie, Alien?',
@@ -50,15 +50,15 @@ const checkAnswers = (btn, answer) => {
     answers[currentQuestion].indexOf(answer) === correctAnswers[currentQuestion]
   ) {
     score++
-    btn.style.backgroundColor = 'green'
     btn.innerText = `Correct!`
+    btn.style.backgroundColor = 'green'
     disableButtons()
     setTimeout(() => {
       nextPage()
     }, 1000)
   } else {
-    btn.style.backgroundColor = 'red'
     btn.innerText = `Oh no! You're incorrect!`
+    btn.style.backgroundColor = 'red'
     disableButtons()
     setTimeout(() => {
       nextPage()
@@ -94,7 +94,6 @@ function nextPage() {
     currentQuestion += 1
   } else {
     document.getElementById('restart').classList.remove('hidden')
-    let userResponse
     if (userResponse === true) {
       restart()
     }

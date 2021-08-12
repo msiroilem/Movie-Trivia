@@ -11,7 +11,7 @@ body {
 }
 h1 {
   text-align: center;
-  font-size: 40px;
+  font-size: 50px;
 }
 
 .answer-fields {
@@ -38,6 +38,7 @@ li {
 a {
   text-decoration: none;
   font-size: 25px;
+  color: white;
 }
 button {
   border-radius: 50px;
@@ -49,6 +50,6 @@ button {
   font-family: 'Montserrat', sans-serif;
 }
 #question-field {
-  font-size: 30px;
+  font-size: 35px;
   text-align: center;
 }
