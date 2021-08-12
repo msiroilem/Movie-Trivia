@@ -8,7 +8,7 @@ const playGameButton = document.querySelector('.play-game-button')
 const answerFields = document.querySelector('.answer-fields')
 const questionField = document.querySelector('#question-field')
 const highScoreDisplay = document.querySelector('.high-score')
-const restartButton = document.querySelector('#restart')
+const playAgainBtn = document.querySelector('#restart')
 const paragraph = document.querySelector('p')
 
 const questions = [
@@ -59,7 +59,6 @@ const checkAnswers = (btn, answer) => {
       nextPage()
     }, 500)
   } else {
-    highScore--
     paragraph.innerText = `Oh no! You're incorrect!`
     btn.style.backgroundColor = 'red'
     disableButtons()
@@ -71,7 +70,6 @@ const checkAnswers = (btn, answer) => {
 }
 
 const displayAnswers = function () {
-  console.log(answers[currentQuestion])
   answers[currentQuestion].forEach((answer) => {
     let btn = document.createElement(`button`)
     btn.className = 'answer-button'
@@ -82,18 +80,21 @@ const displayAnswers = function () {
     answerFields.appendChild(btn)
   })
 }
+function restart() {
+  location.reload()
+}
 
 function nextPage() {
   if (currentQuestion < questions.length - 1) {
     currentQuestion += 1
   } else {
-    location.reload()
+    const userResponse = confirm(`Play again?`)
+    if (userResponse === true) {
+      restart()
+    }
   }
   answerFields.innerHTML = '  '
-  // if (currentQuestion > questions.length - 1) {
-  //   questionField.innerText = 'Would'
-  //   answerFields.innerHTML = ''
-  // }
+
   renderQuestions()
 }
 
@@ -105,28 +106,9 @@ const renderQuestions = function () {
 renderQuestions()
 
 function updateHighScore() {
-  let p = document.createElement('p')
-  let node = document.createTextNode(highScore)
-  p.appendChild(node)
-  highScoreDisplay.appendChild(p)
+  paragraph.innerText = `Score: ${highScore}`
 }
-
-let timer = setInterval(countdownTimer, 10000)
-
-function countdownTimer() {}
-
-function stopTimer() {
-  clearInterval(timer)
-}
-
-function restart() {
-  location.reload()
-}
-restartButton.addEventListener('click', restart)
 
 /* 
-  
-  
-  Not having high score have multiple numbers on at it one time. 
   Possibly implementing timer?
    */
