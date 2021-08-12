@@ -108,7 +108,3 @@ renderQuestions()
 function updateHighScore() {
   paragraph.innerText = `Score: ${highScore}`
 }
-
-/* 
-  Possibly implementing timer?
-   */

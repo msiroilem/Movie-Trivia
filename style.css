@@ -33,3 +33,10 @@ p {
 .hidden {
   display: none;
 }
+li {
+  list-style: none;
+  padding: 5px;
+}
+a {
+  text-decoration: none;
+}
