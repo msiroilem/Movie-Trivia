@@ -10,7 +10,7 @@ const playAgainBtn = document.querySelector('#restart')
 const paragraph = document.querySelector('p')
 
 const questions = [
-  'What was the release year for the Ridley Scott directed movie, Alien?',
+  'Who is the lead actor in Braveheart?',
   'What was the number of samurai in the 1954 movie directed by Akira Kurosawa?',
   'Who is the lead actress in the 1978 movie, Halloween?',
   'What was the directorial debut of Christopher Nolan?',
@@ -23,7 +23,7 @@ const questions = [
 ]
 
 const answers = [
-  ['1978', '1979', '1980', '1981'],
+  ['Mel Gibson', 'Sean Connery', 'Liam Neeson', 'Ralph Fiennes'],
   ['Five', 'Nine', 'Three ', 'Seven'],
   ['Margot Kidder', 'Adrienne King', 'Jamie Lee Curtis', 'Clare Higgins'],
   ['Following', 'Dunkirk', 'Memento', 'Insomnia'],
@@ -35,7 +35,7 @@ const answers = [
   ['Once Upon a Time in Hollywood', 'Nomadland', 'Mank', 'Parasite']
 ]
 
-const correctAnswers = [1, 3, 2, 0, 3, 2, 1, 0, 2, 3]
+const correctAnswers = [0, 3, 2, 0, 3, 2, 1, 0, 2, 3]
 
 const disableButtons = function () {
   const answerButtons = document.querySelectorAll('.answer-button')
