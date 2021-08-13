@@ -6,7 +6,7 @@ body {
   background-color: #1f1f1f;
   padding: 0;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Limelight', sans-serif;
 }
 h1 {
   text-align: center;
@@ -46,7 +46,7 @@ button {
   font-size: 30px;
   margin: 20px;
   padding: 20px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Limelight', sans-serif;
 }
 #question-field {
   font-size: 35px;
