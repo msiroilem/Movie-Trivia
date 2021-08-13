@@ -1,4 +1,4 @@
-# Movie Trivia
+# Movie Trivia Mania
 
 ## Date 8/13/2021
 
@@ -43,3 +43,4 @@ Upon starting the game, the user will be at the main menu and can click Play Gam
 - [IMDB](https://www.imdb.com/?ref_=nv_home)
 - [Wikipedia](https://www.wikipedia.org/)
 - [Trivia Image](https://www.beechmountainresort.com/event/movie-trivia-beech-mountain-brewing-co-february-1-2018/)
+- [Google Web Fonts](https://fonts.google.com/specimen/Limelight) | [Google Web Fonts](https://fonts.google.com/specimen/Montserrat?query=montserrat)
