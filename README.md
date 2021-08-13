@@ -26,8 +26,11 @@ Upon starting the game, the user will be at a main menu and can click Play Game!
 
 **_Future Updates_**
 
-- [ ] Utilize TMDB API to increase questions available to user
+- [ ] Utilize TMDB API to increase questions available to user.
 - [ ] Add additional HTML pages with more categories.
 - [ ] Increase functionality to allow for simultaneous play between two users.
 
 ### Credits
+
+- [IMDB](https://www.imdb.com/?ref_=nv_home)
+- [Wikipedia](https://www.wikipedia.org/)

@@ -1,10 +1,9 @@
 .play-game-button {
   text-align: center;
-  font-size: 30px;
 }
 
 body {
-  background-color: gray;
+  background-color: #1f1f1f;
   padding: 0;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -12,13 +11,13 @@ body {
 h1 {
   text-align: center;
   font-size: 50px;
+  color: white;
 }
 
 .answer-fields {
   display: grid;
   grid-template-columns: repeat(2, auto);
-  padding: auto;
-  place-items: center;
+  justify-items: center;
 }
 
 p {
@@ -37,14 +36,14 @@ li {
 }
 a {
   text-decoration: none;
-  font-size: 25px;
+  font-size: 30px;
   color: white;
 }
 button {
   border-radius: 50px;
   width: 340px;
   height: 100px;
-  font-size: 25px;
+  font-size: 30px;
   margin: 20px;
   padding: 20px;
   font-family: 'Montserrat', sans-serif;
@@ -52,4 +51,5 @@ button {
 #question-field {
   font-size: 35px;
   text-align: center;
+  color: white;
 }
