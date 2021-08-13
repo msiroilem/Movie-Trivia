@@ -4,7 +4,6 @@ let currentQuestion = 0
 const playGameButton = document.querySelector('.play-game-button')
 const answerFields = document.querySelector('.answer-fields')
 const questionField = document.querySelector('#question-field')
-
 const playAgainBtn = document.querySelector('#restart')
 const paragraph = document.querySelector('p')
 

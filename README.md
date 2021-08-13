@@ -1,6 +1,8 @@
-# Movie Trivia Mania
+# Movie Trivia
 
 ## Date 8/13/2021
+
+![Movie Trivia](https://www.beechmountainresort.com/wp-content/uploads/2017/03/movie-trivia.jpg)
 
 ### By: Tyler Jones
 
@@ -22,7 +24,11 @@ A trivia game of movie questions with four choices per question. It is the first
 
 **Getting Started**
 
-Upon starting the game, the user will be at a main menu and can click Play Game! to enter into the trivia game. The user will see a question and four answer choices, with one correct answer. After answering the final, tenth question, the user will be given the option to restart with a Play Again? button.
+Upon starting the game, the user will be at the main menu and can click Play Game! to enter another HTML page with the trivia game. The user will see a question and four answer choices, with one correct answer. After answering the final, tenth question, the user will be given the option to restart with a Play Again? button.
+
+**Screenshot**
+
+![Game Image](https://i.ibb.co/mHFLDt7/Screen-Shot-2021-08-13-at-11-54-41-AM.png)
 
 **_Future Updates_**
 
@@ -34,3 +40,4 @@ Upon starting the game, the user will be at a main menu and can click Play Game!
 
 - [IMDB](https://www.imdb.com/?ref_=nv_home)
 - [Wikipedia](https://www.wikipedia.org/)
+- [Trivia Image](https://www.beechmountainresort.com/event/movie-trivia-beech-mountain-brewing-co-february-1-2018/)
