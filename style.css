@@ -53,3 +53,13 @@ button {
   text-align: center;
   color: white;
 }
+@media only screen and (max-width: 600px) {
+  .answer-fields {
+    grid-template-columns: repeat(2, auto);
+  }
+  button {
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+  }
+}
