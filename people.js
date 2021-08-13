@@ -8,21 +8,21 @@ const questionField = document.querySelector('#question-field')
 const playAgainBtn = document.querySelector('#restart')
 const paragraph = document.querySelector('p')
 
-const questions = [
-  'What was the release year for the Ridley Scott directed movie, Alien?',
-  'What was the number of samurai in the 1954 movie directed by Akira Kurosawa?',
+// TODOconst questions = [
+'Which actor has not played James Bond?',
+  'Which of these actors ?',
   'Who is the lead actress in the 1978 movie, Halloween?',
-  'What was the feature directorial debut of Christopher Nolan?',
+  'What was the directorial debut of Christopher Nolan?',
   'Which actor has NOT played the role of Bruce Wayne in the Batman franchise?',
   'Which movie prominently features a character embodying Death playing chess?',
   'Which of these movies was NOT directed by Paul Thomas Anderson?',
   'Which of these film festivals occurs in January?',
   'Which of these movies was released most recently in theaters?',
   'Which movie won Best Picture at the 92nd Academy Awards?'
-]
+// ]
 
 const answers = [
-  ['1978', '1979', '1980', '1981'],
+  ['Pierce Brosnan', 'George Lazenby', 'Jeremy Renner ', 'Roger Moore'],
   ['Five', 'Nine', 'Three ', 'Seven'],
   ['Margot Kidder', 'Adrienne King', 'Jamie Lee Curtis', 'Clare Higgins'],
   ['Following', 'Dunkirk', 'Memento', 'Insomnia'],
@@ -34,7 +34,7 @@ const answers = [
   ['Once Upon a Time in Hollywood', 'Nomadland', 'Mank', 'Parasite']
 ]
 
-const correctAnswers = [1, 3, 2, 0, 3, 2, 1, 0, 2, 3]
+const correctAnswers = [2, 3, 2, 0, 3, 2, 1, 0, 2, 3]
 
 const disableButtons = function () {
   const answerButtons = document.querySelectorAll('.answer-button')
