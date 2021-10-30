@@ -61,7 +61,9 @@ const answers = [
   ['1', '2', '3', '4']
 ]
 
-const correctAnswers = [1, 3, 2, 0, 3, 2, 1, 0, 2, 3]
+const correctAnswers = [
+  1, 3, 2, 0, 3, 2, 1, 0, 2, 3, 0, 0, 2, 1, 2, 3, 2, 1, 0, 1, 2, 3, 3, 0
+]
 
 const disableButtons = function () {
   const answerButtons = document.querySelectorAll('.answer-button')
