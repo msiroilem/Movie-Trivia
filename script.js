@@ -17,7 +17,21 @@ const questions = [
   'Which of these movies was NOT directed by Paul Thomas Anderson?',
   'Which of these film festivals occurs in January?',
   'Which of these movies was released most recently in theaters?',
-  'Which movie won Best Picture at the 92nd Academy Awards?'
+  'Which movie won Best Picture at the 92nd Academy Awards?',
+  'Test',
+  'Test',
+  'Test',
+  'Test',
+  'Test',
+  'Test',
+  'Test',
+  'Test',
+  'Test',
+  'Test',
+  'Test',
+  'Test',
+  'Test',
+  'Test'
 ]
 
 const answers = [
@@ -30,7 +44,21 @@ const answers = [
   ['Hard Eight', 'Event Horizon', 'Junun', 'Phantom Thread'],
   ['Sundance', 'Berlinale', 'Tribeca', 'South by Southwest'],
   ['Black Widow', 'Cruella', 'Jungle Cruise', 'Nobody'],
-  ['Once Upon a Time in Hollywood', 'Nomadland', 'Mank', 'Parasite']
+  ['Once Upon a Time in Hollywood', 'Nomadland', 'Mank', 'Parasite'],
+  ['1', '2', '3', '4'],
+  ['1', '2', '3', '4'],
+  ['1', '2', '3', '4'],
+  ['1', '2', '3', '4'],
+  ['1', '2', '3', '4'],
+  ['1', '2', '3', '4'],
+  ['1', '2', '3', '4'],
+  ['1', '2', '3', '4'],
+  ['1', '2', '3', '4'],
+  ['1', '2', '3', '4'],
+  ['1', '2', '3', '4'],
+  ['1', '2', '3', '4'],
+  ['1', '2', '3', '4'],
+  ['1', '2', '3', '4']
 ]
 
 const correctAnswers = [1, 3, 2, 0, 3, 2, 1, 0, 2, 3]
